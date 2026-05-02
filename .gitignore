@@ -1,0 +1,56 @@
+# caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# envs
+.venv/
+venv/
+env/
+ENV/
+
+# configs and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# Flask/runtime files
+instance/
+*.log
+logs/
+
+# Local uploads and generated data
+uploads/
+tmp/
+temp/
+*.sqlite
+*.sqlite3
+*.db
+chroma/
+chroma_db/
+.chroma/
+
+# Model and embedding caches
+.cache/
+models/
+
+# Build/package outputs
+build/
+dist/
+*.egg-info/
+
+# other
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
+
+

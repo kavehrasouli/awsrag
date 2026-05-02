@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini RAG</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Mini RAG System</h1>
+    <p class="subtitle">Powered by GPT-OSS-20B on AWS Bedrock + ChromaDB</p>
+
+    <div class="dropzone" id="dropzone">
+        <p class="icon"></p>
+        <p><strong>Drag & drop PDF files here</strong></p>
+        <p>or click to select files</p>
+        <input type="file" id="fileInput" accept=".pdf" multiple>
+    </div>
+
+    <div id="upload-status"></div>
+    <div id="doc-count">
+        Chunks in knowledge base: <span id="count">0</span>
+        <button class="clear-btn" id="clear-btn">Clear all</button>
+    </div>
+    <div id="file-list"></div>
+
+    <div class="search-row">
+        <input type="text" id="q" placeholder="Upload a PDF first, then ask questions about it...">
+        <button id="ask-btn" disabled>Ask</button>
+    </div>
+
+    <div id="result">
+        <div class="empty-state">Upload a PDF to get started</div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
